@@ -1,0 +1,128 @@
+.containerFluid {
+  padding: 20px;
+    background-color: #283243;
+  min-height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+  margin-left: 300px;
+}
+
+.card {
+  background-color: #283243; 
+  color: white; 
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.cardHeader {
+  background-color: #283243;
+  color: white;
+  padding: 10px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.cardBody {
+  padding: 20px;
+  background-color: #283243;
+  border-radius: 8px; 
+  border: 1px solid #9ba6b1; 
+}
+
+.form-control {
+  background-color: #65738c;
+  color: white; 
+  border: 1px solid #9ba6b1;
+}
+
+.form-control::placeholder {
+  color: #9ba6b1;
+}
+
+.text-danger {
+  color: #ff4d4d;
+}
+
+.alert {
+  border-radius: 4px;
+  padding: 10px;
+}
+
+.alert-danger {
+  background-color: #ffdddd;
+  color: #d9534f;
+}
+
+.alert-success {
+  background-color: #dff0d8;
+  color: #3c763d;
+}
+
+.uploadButton {
+  background-color: #5d97d1;
+  color: white;
+  width: 150px;
+  height: 45px;
+  border: none;
+  border-radius: 5px; 
+  cursor: pointer; 
+  font-size: 16px;
+  font-weight: bold; 
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.uploadButton:disabled {
+  background-color: #4a5a6e; 
+  cursor: not-allowed;
+}
+
+.uploadButton:hover {
+  background-color: #4a86e8; 
+  transform: scale(1.05); 
+  font-size: 16px; 
+  font-weight: bold; 
+}
+
+.uploadButton:active {
+  background-color: #3b6ec1;
+  transform: scale(1);
+}
+
+
+.categoryCard {
+  background-color: #4a5a6e;
+  color: white;
+  border: none;
+  margin: 5px;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.categoryCard:hover {
+  transform: scale(1.05); 
+}
+
+.categoryCard.selected {
+  background-color: #7a8a9b;
+}
+
+.qualityCard {
+  background-color: #4a5a6e;
+  color: white; 
+  border: none;
+  margin: 5px;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: transform 0.3s ease; 
+}
+
+.qualityCard:hover {
+  transform: scale(1.05); 
+}
+
+.qualityCard.selected {
+  background-color: #7a8a9b; 
+}

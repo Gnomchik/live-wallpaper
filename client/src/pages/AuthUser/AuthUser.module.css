@@ -1,0 +1,86 @@
+.outerContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #283243;
+}
+
+.innerContainer {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    background-color: #333b4c;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+    color: #ddd;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.formLabel {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #ddd;
+}
+
+.formControl {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #444c5e;
+    color: #ddd;
+}
+
+.btnPrimary {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+}
+
+.textDanger {
+    color: red;
+}
+
+.alert {
+    padding: 10px;
+    margin-top: 15px;
+    border-radius: 5px;
+    color: #ddd;
+}
+
+.alertSuccess {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.alertDanger {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.mt3 {
+    margin-top: 15px;
+    color: #ddd;
+}
+
+a{
+    color: #ddd;
+}
+
+.errorContainer {
+    background-color: #283243;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+}

@@ -1,0 +1,128 @@
+* {
+  font-size: large;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+
+.sidebarAndQualityBarContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.sidebarContainer,
+.qualityBarContainer {
+  margin-top: 15px;
+  width: 100%;
+  background: #3b4555;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  color: #333333;
+  position: relative;
+  transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+}
+
+
+.collapsibleContent {
+  overflow: hidden;
+  transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+}
+
+
+.collapsibleContent.show {
+  max-height: 510px; 
+  opacity: 1;
+  transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+}
+
+.collapsibleContent {
+  max-height: 0; 
+  opacity: 0;
+  transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+}
+
+.sidebarContainer .listGroup,
+.qualityBarContainer .listGroup {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+
+.cardHeader {
+  background-color: #3b4555;
+  color: #333333;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.cardHeader:hover {
+  background-color: #d0e2f1;
+  color: #333333;
+}
+
+.listGroup {
+  background-color: #3b4555;
+  padding: 0;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.listGroupItem {
+  font-size: large;
+  text-align: center;
+  background-color: #3b4555;
+  cursor: pointer;
+  font-family: 'Roboto', sans-serif;
+  color: #b6bdc4;
+  padding: 10px 15px;
+  border-radius: 0;
+  margin-bottom: 0;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, border 0.3s ease-in-out;
+  border: none;
+  border-radius: 15px;
+}
+
+.listGroupItem:hover {
+  background-color: #1a2229;
+  color: #b6bdc4;
+  border-radius: 15px;
+}
+
+.listGroupItem:focus {
+  background-color: #c0d8f1;
+}
+
+.listGroupItem.customLink {
+  background-color: transparent;
+  border: none;
+  color: #007bff;
+  text-align: left;
+  padding: 10px 15px;
+  margin: 10px 0;
+  font-size: 16px;
+}
+
+.listGroupItem.customLink:hover {
+  color: #0056b3;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d0e2f1;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #007bff;
+
+}

@@ -1,0 +1,65 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+model User {
+  id        Int      @id @default(autoincrement())
+  name      String   @unique
+  email     String   @unique
+  password  String
+  photo     String?
+  videos    Video[]
+  likes     Like[]   // Добавлено: связь с лайками
+}
+
+model Video {
+  id         Int            @id @default(autoincrement())
+  title      String
+  path       String
+  preview    String
+  quality    Quality        @relation(fields: [qualityId], references: [id], onDelete: Cascade)
+  qualityId  Int
+  author     User           @relation(fields: [authorId], references: [id], onDelete: Cascade)
+  authorId   Int
+  categories VideoCategory[]
+  description String
+  likeCount  Int            @default(0) 
+  likes      Like[]         
+}
+
+model Like { 
+  userId  Int 
+  videoId Int 
+  user    User  @relation(fields: [userId], references: [id], onDelete: Cascade)
+  video   Video @relation(fields: [videoId], references: [id], onDelete: Cascade)
+
+  @@id([userId, videoId]) // Обеспечивает уникальность пары пользователь-видео
+}
+
+model Category {
+  id        Int            @id @default(autoincrement())
+  name      String         @unique
+  videos    VideoCategory[]
+  videoCount Int           @default(0)
+}
+
+model Quality {
+  id        Int      @id @default(autoincrement())
+  name      String
+  videos    Video[]
+  videoCount Int      @default(0)
+}
+
+model VideoCategory {
+  videoId   Int
+  categoryId Int
+  video     Video     @relation(fields: [videoId], references: [id], onDelete: Cascade)
+  category  Category  @relation(fields: [categoryId], references: [id], onDelete: Cascade)
+
+  @@id([videoId, categoryId])
+}
